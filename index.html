@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Budget Jars</title>
+
+		<!-- UIkit CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+
+		<!-- UIkit JS -->
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://kit.fontawesome.com/20e1432bd1.js" crossorigin="anonymous"></script>
+	</head>
+
+	
+	<body>
+		<section class="uk-card uk-card-default" id="pageContainer">
+			<header>
+				<h1>Budget Jars</h1>
+				<nav>
+					<ul>
+						<li id="showAbout"><i class="fa-solid fa-circle-question nav-icon"></i></li>
+						<li id="showAddJarArea"><button class="uk-button uk-button-default uk-button-small"><i class="fa-solid fa-plus"></i> Add Jar</button></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section id="about" class="uk-section uk-section-muted uk-section-xsmall hidden">
+				<div id="closeAbout">
+					<h2>About Budget Jars</h2>
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+				
+				<p>Use this app to keep track of how much you have available in your budget for each category.</p>
+				<p>If the "Total Amount Saved" matches your bank account balance, then you'll know you've accounted for everything!</p>
+				
+			</section>
+			
+			<section id="addJarArea" class="uk-section uk-section-muted uk-section-xsmall">
+				
+				<h2>New Jar</h2>
+				<form class="uk-form-horizontal">
+
+					<div>
+						<label class="uk-form-label" for="jarName">Jar Name</label>
+						<div class="uk-form-controls">
+							<input class="uk-input" id="jarName" type="text" placeholder="Groceries">
+						</div>
+					</div>
+
+					<div class="uk-margin">
+						<label class="uk-form-label" for="jarTargetAmount">Target Amount</label>
+						<div class="uk-form-controls">
+							<input class="uk-input" id="jarTargetAmount" type="number" placeholder="100">
+						</div>
+					</div>
+
+					<button id="newJar" type="submit" class="uk-button uk-button-primary">Save</button>
+				</form>
+			</section>
+
+			<section id="updateJarArea" class="uk-section uk-section-muted uk-section-xsmall hidden">
+				<h2>Update <span id="selectedJar"></span>Jar</h2>
+				<form class="uk-form-horizontal">
+					<div>
+						<input type="hidden" id="jarName2" name="title" value="My excellent blog post">
+					  </div>
+
+					<div class="uk-margin">
+						<label class="uk-form-label" for="transactionAmount">Amount</label>
+						<div class="uk-form-controls">
+							<input class="uk-input" id="transactionAmount" type="number" placeholder="100">
+						</div>
+					</div>
+
+					<button id="addFunds" type="submit" class="uk-button uk-button-primary">Add</button>
+						<button id="removeFunds" type="submit" class="uk-button uk-button-primary">Subtract</button>
+				</form>
+			</section>
+			
+			<table class="uk-table uk-table-hover">
+				<thead>
+					<td>Jar Name</td>
+					<td>Amount Saved</td>
+					<td>Target Amount</td>
+				</thead>
+				<tbody id="jarArea">
+	
+				</tbody>
+				<tfoot>
+					<td><h3>Total</h3></td>
+					<td id="totalSaved"></td>
+					<td id="totalTarget"></td>
+				</tfoot>
+			</table>
+			<section>
+				<ul ></ul>
+			</section>
+		</section>
+		
+
+
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
